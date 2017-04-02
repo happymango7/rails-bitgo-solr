@@ -1,0 +1,9 @@
+<div class="content edit-content">
+  <h1 class="edit-header">Edit "<%= @project.title %>"</h1>
+
+  <%= render 'form' %>
+
+  <div class="button-wrapper">
+    <%= link_to 'Back to project', @project, :class => "back-button" %>
+  </div>
+</div>

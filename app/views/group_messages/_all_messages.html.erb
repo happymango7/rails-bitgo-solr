@@ -1,0 +1,34 @@
+<% unless @group_messages.blank? %>
+    <% @group_messages.each do |message| %>
+        <div class="row message">
+          <div class="message-sender">
+            <a href="#">
+              <% if message.user.picture? %>
+                  <%= image_tag(message.user.picture, class: "profile-image") %>
+              <% else %>
+                  <%= gravatar_for(message.user, 35) %>
+              <% end %>
+            </a>
+          </div>
+          <div class="message-content">
+            <div class="message-text"><%= message.message %></div>
+            <span class="name"><%= message.user.try(:name) %></span>
+            <span class="message-date"><%= time_ago_in_words(message.created_at) %></span>
+            <br>
+            <% if message.attachment? %>
+                <%= image_tag message.attachment.url %>
+                <br>
+                <br>
+            <% end %>
+          </div>
+        </div>
+    <% end %>
+<% else %>
+    <div class="row message">
+      <div class="message-content">
+        No Messages
+      </div>
+    </div>
+<% end %>
+
+

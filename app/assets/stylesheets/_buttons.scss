@@ -1,0 +1,37 @@
+@import 'colors';
+
+.hero-button {
+  background-color: $sky-blue;
+  border-radius: 5px;
+  color: $white;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  transition: 0.2s ease background-color;
+
+  &:hover {
+    background-color: $sky-blue-hover;
+    color: $white;
+  }
+}
+
+
+.button {
+  &.blue {
+    background-color: $sky-blue;
+  }
+
+  &.green {
+    background-color: $success-green;
+  }
+
+  &.warning {
+    background-color: $red !important;
+  }
+}
+
+.button_to {
+  padding-bottom: 6rem !important
+}
+

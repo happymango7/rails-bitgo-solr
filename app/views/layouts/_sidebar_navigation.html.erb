@@ -1,0 +1,30 @@
+<div id="side-menu-id" class="side-menu">
+
+  <ul class="side-nav">
+    <li class="<%= active_class(my_projects_path(current_user)) %>">
+      <i class="fa fa-file-text-o" aria-hidden="true"></i>
+      <%= link_to 'My Projects', my_projects_path(current_user) %>
+    </li>
+
+    <li class="<%= active_class(group_messages_path) %>">
+      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      <a href="/group_messages">Messages</a>
+    </li>
+
+    <li class="<%= active_class(notifications_path) %>">
+      <i class="fa fa-bell-o" aria-hidden="true"></i>
+      <a href="/notifications">Notifications</a>
+    </li>
+
+    <li class="">
+      <i class="fa fa-btc" aria-hidden="true"></i>
+      <a href="javascript:void(0)">Wallet</a>
+    </li>
+
+    <li class="<%= active_class(user_path(current_user)) %>">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <%= link_to 'Profile', user_path(current_user) %>
+    </li>
+
+  </ul>
+</div>

@@ -1,0 +1,947 @@
+// modal styles goes here
+
+@import 'variables';
+
+.modal {
+  top: 100px !important;
+}
+.modal-header {
+  .close {
+    background-color: transparent;
+  }
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  border-bottom: none !important;
+}
+
+.modal-content {
+  border-radius: 0 !important;
+}
+
+
+.register-modal {
+  .modal-body {
+    padding: 10px 50px;
+  }
+  .modal-dialog {
+    width: 767px;
+    border-radius: 0;
+  }
+}
+
+.modal-header {
+  h2, h3, h4 {
+    font-family: 'Roboto';
+    text-align: center;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+}
+
+.social-register {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  border-right: 1px solid #ddd;
+  padding: 20px 0px;
+
+  img {
+    width: 100%;
+    height: 45px;
+  }
+
+  .social-link {
+    display: inline-block;
+    padding: 5px 10px;
+    width: 250px;
+    text-align: left;
+    margin-bottom: 10px;
+
+    &.facebook {
+      background-color: $facebook-clr;
+    }
+    &.twitter {
+      background-color: $twitter-clr;
+    }
+    &.google {
+      background-color: $google-clr;
+    }
+
+    i {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 1.3em;
+      color: #fff;
+      vertical-align: middle;
+      padding: 0;
+    }
+
+    a {
+      font-family: 'Roboto';
+      font-size: 1em;
+      color: #fff;
+      font-weight: bold;
+      vertical-align: middle;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#sign_up_show,
+#sign_in_show {
+  padding: 20px;
+}
+
+.register-form {
+  .form-group {
+    label {
+      font-family: 'Libre Franklin';
+      font-size: 1em;
+      font-weight: 300;
+      color: #333;
+    }
+
+    input {
+      border: 1px solid #E4E6E8;
+      box-shadow: none;
+      margin: 0;
+      &:hover,
+      &:focus {
+        border: 1px solid #ADD8E6;
+      }
+    }
+
+    .forgot-link {
+      display: block;
+      width: 100%;
+      text-align: right;
+
+      a {
+        font-family: 'Libre Franklin';
+        font-size: 0.9em;
+        color: #333;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .checkbox {
+    label {
+      font-family: 'Libre Franklin';
+      color: #333;
+      font-size: 1em;
+    }
+  }
+
+  .normal-button {
+    width: 100%;
+  }
+}
+
+.terms-intro {
+  padding: 0px 100px;
+
+  p {
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 1em;
+    color: #555;
+  }
+  a {
+    font-family: 'Roboto';
+    color: #555;
+    font-size: 1em;
+    text-decoration: underline;
+  }
+}
+
+.signin-intro {
+  padding: 0px 100px;
+
+  p {
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 1em;
+    color: #555;
+  }
+  a {
+    font-family: 'Roboto';
+    font-size: 1em;
+    color: #555;
+    text-decoration: underline;
+  }
+}
+
+
+#editProjectModal {
+  width: 90%;
+  max-width: 1024px;
+  margin: auto;
+  font-size: 100%;
+
+  button.close-modal {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: #666;
+    z-index: 9999;
+    font-size: 25px;
+    padding: 0;
+    background: transparent;
+  }
+
+  .modal-dialog {
+    width: 100%;
+  }
+
+  .modal-body {
+    padding: 0;
+    min-height: 600px;
+    position: relative;
+  }
+
+  .project-content-wrapper {
+    background-color: #fff;
+    padding: 20px 30px;
+
+    .content-header {
+      margin-bottom: 25px;
+
+      h4 {
+        display: inline-block;
+        color: #333;
+        font-weight: 600;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+    .content-section {
+      h5 {
+        font-weight: 500;
+        color: #555;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .project-comment-wrapper {
+    background-color: #ddd;
+    padding: 80px 10px 10px 30px;
+    min-height: 600px;
+
+    h4 {
+      display: inline-block;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .comment-card {
+      position: relative;
+
+      .card-mark {
+        display: inline-block;
+        position: absolute;
+        left: -50px;
+        top: 0;
+
+        i {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          color: #fff;
+          background: #fff none repeat scroll 0% 0%;
+          text-align: center;
+          padding: 0px;
+          border-radius: 50%;
+          font-size: 22px;
+          color: $alt-clr;
+          border: 1px solid #ddd;
+          box-shadow: 1px 1px 1px 0px rgba(145, 145, 145, 0.5);
+        }
+      }
+      .card-box {
+        display: inline-block;
+        width: 100%;
+        margin: auto;
+        background-color: #fff;
+        padding: 7px;
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px 0px rgba(145, 145, 145, 0.5);
+
+        img.portrait {
+          display: inline-block;
+          width: 30px;
+          height: auto;
+          border-radius: 50%;
+        }
+
+        .name-date {
+          display: inline-block;
+          padding-left: 10px;
+
+          h6 {
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+            margin: 0;
+          }
+          span {
+            font-size: 11px;
+            color: #555;
+          }
+        }
+
+        .card-actions {
+          display: inline-block;
+
+          ul {
+            display: inline-block;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+            li {
+              float: left;
+              a {
+                font-size: 18px;
+                padding-left: 10px;
+              }
+            }
+          }
+        }
+
+        .card-text {
+          font-size: 12px;
+          color: #333;
+          span:first-child {
+            font-weight: 600;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+#Project-Invite-Model {
+  padding: 0;
+  background-color: #FFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-clip: padding-box;
+  outline: 0px none;
+
+  form {
+    input {
+      border: 1px solid #E4E6E8;
+      box-shadow: none;
+      padding: 0px 10px;
+      height: 40px;
+      background-color: #fff;
+
+      &:hover,
+      &:focus {
+        border: 1px solid #ADD8E6;
+      }      
+    }
+
+    button {
+      font-size: 16px !important;
+    }
+  }
+
+  .columns {
+    padding-left: 0;
+  }
+
+  h4#middle {
+    font-weight: 500;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  #response {
+    margin: 5px;
+    text-align: center;
+  }
+
+  #contacts {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .contact-importer {
+    img {
+      width: 20px;
+    }
+  }
+
+  .share-link {
+    font-size: 14px;
+    color: #555;
+  }
+
+  a.close-reveal-modal {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    color: #aaa;
+    font-weight: 600;
+    font-size: 18px;
+    right: 10px;
+    top: 10px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #555;
+    }
+  }
+}
+
+
+#startProjectModal {
+  .modal-body {
+    padding: 15px 30px 30px;
+  }
+
+  textarea {
+    border-radius: 0;
+  }
+
+  .form-actions {
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: right;
+    margin: 0;
+
+    input {
+      height: 40px;
+      color: #000;
+      padding: 0 20px;
+    }
+  }
+
+  input#upload_button {
+    width: 100% !important;
+    background-color: #fff;
+    display: block;
+    text-align: left;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    border-radius: 0;
+    max-width: none;
+    font-family: 'Libre Franklin';
+    font-size: 1em;
+    color: #888;
+  }
+
+  .form-group {
+    position: relative;
+    label {
+      font-family: 'Libre Franklin';
+      font-size: 0.9em;
+      color: #333;
+    }
+    i.fa-map-marker {
+      position: absolute;
+      left: 5px;
+      bottom: 8px;
+      color: #555;
+      font-size: 1.2em;
+    }
+    input#country-field {
+      padding-left: 35px;
+    }
+  }
+}
+
+
+.or-container {
+  text-align: center;
+  margin: 0;
+  clear: both;
+  color: #6A737C;
+  font-variant: small-caps;
+  padding: 0px;
+  border: 0px none;
+
+  .or-hr {
+    margin-bottom: 0px;
+    position: relative;
+    top: 0;
+    height: 0px;
+    border-width: 1px 0px 0px;
+    border-style: solid none none;
+    border-color: #E4E6E8 -moz-use-text-color -moz-use-text-color;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    color: #9FA6AD;
+    background-color: #9FA6AD;
+  }
+
+  #or {
+    display: inline-block;
+    position: relative;
+    padding: 0px 10px;
+    background-color: #FFF;
+    top: -13px;
+    font-size: 16px;
+  }
+}
+
+
+.register-form-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+
+// project details modal
+
+.base-button {
+  padding: 0;
+  height: 36px;
+  line-height: 36px;
+  border: 2px solid #000;
+  border-radius: 100px;
+  font-family: 'Libre Franklin';
+  font-size: 1em;
+}
+
+.edit-link {
+  float: right;
+  color: #555;
+
+  &:hover {
+    color: #000;
+  }
+
+  i {
+    color: #555;
+    padding-top: 15px;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+
+#myModal {
+  overflow-y: scroll;
+  max-width: 1200px;
+  margin: auto;
+  z-index: 1000;
+
+  ::-webkit-scrollbar {
+      width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+      border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  }
+
+  input[type="text"] {
+    display: inline-block;
+    height: 36px;
+    border-color: #ddd;
+    font-family: 'Libre Franklin';
+
+    &:hover,
+    &:focus {
+      border-color: #555;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .modal-content {
+    position: relative;
+  }
+  #myModalclose {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 22px;
+  }
+
+  .title-wrapper {
+    padding: 40px 20px 30px;
+    text-align: center;
+    h2 {
+      font-family: 'Roboto';
+      font-weight: 600;
+      color: #000;
+      display: inline-block;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    #edit-title {
+      @extend .edit-link;
+    }
+
+    input[type="text"] {
+      width: 50%;
+    }
+
+    button {
+      @extend .base-button;
+      min-width: 100px;
+      vertical-align: middle;
+      text-transform: uppercase;
+
+      &[type="submit"] {
+        background-color: #fff;
+        color: #000;
+      }
+      &[type="reset"] {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+
+  .desc-block {
+    h4 {
+      font-family: 'Roboto';
+      font-weight: 500;
+      color: #000;
+      display: inline-block;
+    }
+    a {
+      @extend .edit-link;
+    }
+    p {
+      font-family: 'Libre Franklin';
+      font-size: 1em;
+      color: #555;
+      line-height: 1.5em;
+    }
+    textarea {
+      margin-bottom: 10px;
+      font-family: 'Libre Franklin';
+      color: #555;
+      font-size: 1em;
+    }
+    button {
+      @extend .base-button;
+      min-width: 100px;
+      vertical-align: middle;
+      text-transform: uppercase;
+
+      &[type="submit"] {
+        background-color: #fff;
+        color: #000;
+      }
+      &[type="reset"] {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+
+  #Task-comments {
+    h5 {
+      font-family: 'Roboto';
+      color: #000;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 1.1em;
+      i {
+        color: #555;
+        font-size: 1.3em;
+      }
+    }
+
+    .comment-view {
+      padding: 10px 0px;
+    }
+
+    .comment-text {
+      display: inline-block;
+      h6 {
+        font-family: 'Libre Franklin';
+        font-size: 0.9em;
+      }
+    }
+
+    .profile-image {
+      margin: 0;
+      img {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .comments-block {
+    .post-comment {
+      textarea {
+        float: none;
+        width: 100%;
+        font-family: 'Libre Franklin';
+        color: #555;
+        margin-bottom: 10px;
+      }
+    }
+
+    .post-person {
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 50%;
+        float: left;
+      }
+    }
+
+    form {
+      display: inline-block;
+      width: 90%;
+      button {
+        @extend .base-button;
+        background: #fff;
+        color: #000;
+        width: 120px;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      i {
+        font-size: 1.3em;
+        color: #555;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  #task-activity {
+    margin-top: 40px;
+    h5 {
+      font-family: 'Roboto';
+      color: #000;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 1.1em;
+      i {
+        color: #555;
+        font-size: 1.3em;
+      }
+    }
+    .activity-block {
+      clear: both;
+      img {
+        margin-bottom: 0;
+      }
+      h6 {
+        font-family: 'Libre Franklin';
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  .task-details-right-side {
+    border-left: none;
+
+    .fund {
+      button {
+        display: inline-block;
+        padding: 0;
+        height: 45px;
+        line-height: 45px;
+        border: 2px solid #000;
+        border-radius: 100px;
+        font-family: 'Libre Franklin';
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 45%;
+
+        &[title="fund"] {
+          background-color: #fff;
+          color: #000;
+        }
+        &[title="do"] {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+
+      .card-report {
+        table {
+          width: 100%;
+        }
+
+        tbody {
+          tr td {
+            padding: 0 !important;
+            text-align: left;
+            line-height: 1em !important;
+          }
+          tr.value {
+            td {
+              font-family: 'Libre Franklin';
+              color: #333 !important;
+              font-size: 1em !important;
+              font-weight: bold;
+            }
+          }
+          tr.items {
+            td {
+              font-family: 'Libre Franklin';
+              color: $grey-clr !important;
+              font-size: 0.9em !important;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+    .deadline-block {
+      h5 {
+        font-family: 'Roboto';
+        color: #000;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.1em;
+      }
+      p {
+        font-family: 'Libre Franklin';
+        font-size: 1em;
+        color: #555;
+        i {
+          color: #555;
+          font-size: 1.3em;
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .team-block {
+      padding-top: 5px;
+      h5 {
+        font-family: 'Roboto';
+        color: #000;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.1em;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+    }
+
+    .wallet-block {
+      h5 {
+        font-family: 'Roboto';
+        color: #000;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      p {
+        font-family: 'Libre Franklin';
+        font-size: 1em;
+        color: #555;
+      }
+    }
+
+    .approve-block {
+      a.approve-link {
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+        height: 45px;
+        line-height: 45px;
+        border: 2px solid #000;
+        border-radius: 100px;
+        font-family: 'Libre Franklin';
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #fff;
+        color: #000;
+        text-align: center;
+
+        i {
+          font-size: 1.3em;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .button-group {
+    button {
+      display: inline-block;
+      padding: 0;
+      padding-left: 20px;
+      height: 40px;
+      line-height: 40px;
+      font-family: 'Libre Franklin';
+      font-size: 1.1em;
+      font-weight: bold;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+
+      background-color: #eee;
+      border: 1px solid #ddd;
+      color: #555;
+
+      i {
+        padding-right: 10px;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .attachments {
+    h5 {
+      font-family: 'Roboto';
+      color: #000;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 1.1em;
+    }
+  }
+}
+

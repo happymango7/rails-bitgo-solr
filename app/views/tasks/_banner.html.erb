@@ -1,0 +1,74 @@
+<!--<section  class='welcome-banner'>-->
+
+<div class='welcome-banner'>
+  <div>
+    <%= image_tag(@project.picture) %>
+  </div>
+
+  <% if current_user && current_user.id == @project.user_id %>
+    <div class="mid-section" data-target="#project-img-edit" data-toggle="modal">
+  <% else %>
+    <div class="mid-section">
+  <% end %>
+
+    <% @projec_conut= if @project.tasks.count==0 then
+                        1
+                      else
+                        @project.tasks.count
+                      end %>
+
+    <div class="row">
+      <center class="project-intro">
+        <div class="text-center">
+          <% if @project.user.picture? %>
+            <%= image_tag(@project.user.picture, size: "50x50") %>
+          <% else %>
+            <%= gravatar_for_user(@project.user)%>
+          <%end%>
+        </div>
+        <p class="project-owner">by <%= @project.user.name %></p>
+        <h2 class="project-title"><%= @project.title %></h2>
+        <p class="project-city"><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @project.user.city %></p>
+      </center>
+    </div>
+
+    <div class="row">
+      <center>
+        <div class="task-progress-wrapper">
+          <div class="progress mb20">
+            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: <%= (@sourcing_tasks.count / @projec_conut ) * 100 %> %">
+            </div>
+          </div>
+
+          <table>
+            <tr class="value">
+              <td><%= (@sourcing_tasks.count / @projec_conut)*100 %> %</td>
+              <td><%= @done_tasks.count.to_s + "/" + @projec_conut.to_s %></td>
+
+              <% @particpent=0 %>
+              <% @budget=0 %>
+              <% @project.tasks.each do |p| %>
+                  <% @particpent=@particpent+ p.number_of_participants rescue 0 %>
+                  <% @budget=@budget+ p.budget %>
+              <% end %>
+
+              <td><%= @project.team.team_memberships.count %>/<%= @particpent %></td>
+              <td>$<%= @budget %></td>
+            </tr>
+            <tr class="items">
+              <td>Funded</td>
+              <td>Completed Tasks</td>
+              <td>Tearmates</td>
+              <td>Raised</td>
+            </tr>
+          </table>
+        </div>
+      </center>
+    </div>
+
+    <div class="row">
+      <center><a href="#" id="myBtn" class="button round get-invo-btn">Join the Team</a></center>
+    </div>
+
+  </div>
+</div>
